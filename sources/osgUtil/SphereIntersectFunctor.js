@@ -7,8 +7,6 @@ var IntersectFunctor = require('osgUtil/IntersectFunctor');
 var SphereIntersection = function() {
     IntersectFunctor.Intersection.call(this);
 
-    this._zone = undefined;
-
     this._localIntersectionNormal = vec3.clone(vec3.ONE);
 
     // index of vertex
@@ -28,7 +26,7 @@ var SphereIntersectFunctor = function() {
     this._Intersection = SphereIntersection;
 
     this._center = undefined;
-    this._radius = 0;
+    this._radius = 0.0;
 };
 
 MACROUTILS.createPrototypeObject(
